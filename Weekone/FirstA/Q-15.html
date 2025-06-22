@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- babel -->
+ <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="root">hello doom</div>
+    
+    
+</body>
+</html>
+
+<!-- <script type="text/babel">
+
+const { useState } = React;
+
+function App() {
+  const [page, setPage] = useState("Home");
+
+  function renderContent() {
+    if (page === "Home") {
+      return <h2 style={{ color: "red" }}>Welcome to Home</h2>;
+    } else if (page === "About") {
+      return <h2 style={{ color: "blue" }}>About Us</h2>;
+    } else if (page === "Contact") {
+      return <h2 style={{ color: "green" }}>Contact Us</h2>;
+    }
+  }
+
+  return (
+    <>
+      <nav>
+        <button onClick={() => setPage("Home")}>Home</button>
+        <button onClick={() => setPage("About")}>About</button>
+        <button onClick={() => setPage("Contact")}>Contact</button>
+      </nav>
+
+      <div>
+        {renderContent()}
+      </div>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
+
+</script> -->
+
+
+<script type="text/babel">
+
+let {useState}=React
+
+
+
+
+
+
+function Container(){
+    
+const [page, setPage] = useState("Home");
+
+
+  function RenderContent() {
+    if (page === "Home") {
+      return <h2 style={{ color: "red" }}>Welcome to Home</h2>;
+    } else if (page === "About") {
+      return <h2 style={{ color: "blue" }}>About Us</h2>;
+    } else if (page === "Contact") {
+      return <h2 style={{ color: "green" }}>Contact Us</h2>;
+    }
+  }
+
+
+
+    return(
+<>
+<button onClick={()=>setPage("Home")}  >Home</button>
+<button onClick={()=>setPage("About")}>About </button>
+<button onClick={()=>setPage("Contact")}>contact</button>
+
+
+<div>
+    <RenderContent/>
+</div>
+</>
+)
+
+}
+
+
+
+
+function App(){
+return (
+<>
+<Container/>
+</>
+)
+
+}
+
+
+let root=ReactDOM.createRoot(document.getElementById("root"))
+root.render(<App/>)
+
+</script> 

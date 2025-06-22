@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- babel -->
+ <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+<div id="root">hello From Dom</div>
+
+</body>
+</html>
+<script  type="text/babel">
+
+function Componet(prop){
+
+return (
+    <>
+    
+<h1>Movie:{prop.title}</h1>
+<p>Con:{prop.contant}</p>
+
+</>
+
+)
+
+
+}
+
+
+let  App=()=>{
+return (
+<>
+<Componet title="raja"  contant="Hello ji this is the movie name"/>
+<Componet/>
+<Componet/>
+
+</> 
+)
+
+}
+
+ const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<App/>);
+
+</script>
